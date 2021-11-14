@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Egm-uD-CSa">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shopping List-->
+        <scene sceneID="9Ce-tL-KXA">
+            <objects>
+                <viewController title="Shopping List" id="u9R-mh-ABO" customClass="ShoppingListVC" customModule="Comidinhas" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9da-sL-WzX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Khh-rx-Szb">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Sir-aa-G8v"/>
+                        <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Khh-rx-Szb" firstAttribute="leading" secondItem="Sir-aa-G8v" secondAttribute="leading" id="NLz-Ku-y3Q"/>
+                            <constraint firstItem="Khh-rx-Szb" firstAttribute="top" secondItem="Sir-aa-G8v" secondAttribute="top" id="ULb-Yy-T4N"/>
+                            <constraint firstItem="Khh-rx-Szb" firstAttribute="trailing" secondItem="Sir-aa-G8v" secondAttribute="trailing" id="VkK-u4-g1k"/>
+                            <constraint firstItem="Khh-rx-Szb" firstAttribute="bottom" secondItem="Sir-aa-G8v" secondAttribute="bottom" id="g6C-EC-Bda"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Shopping List" id="JIt-Bh-sBz">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="trash" id="Dhr-an-LM2">
+                            <color key="tintColor" red="0.86411565540000002" green="0.24482959509999999" blue="0.20371296999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="limpaLista:" destination="u9R-mh-ABO" id="GnN-9O-bAQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shoppingListClearButton" destination="Dhr-an-LM2" id="agh-sh-5qy"/>
+                        <outlet property="shoppingListTableView" destination="Khh-rx-Szb" id="s17-wE-PIO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ql-b8-iJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="875.71214392803608"/>
+        </scene>
+        <!--Shopping List-->
+        <scene sceneID="BWI-G0-0Mz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Egm-uD-CSa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1000" title="Shopping List" image="cart" catalog="system" id="8g4-sx-aKP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ARP-e8-B0s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.80392156859999997" green="0.1529411765" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.99710541959999999" green="0.79936999080000004" blue="0.48383164410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                            <color key="textColor" red="0.84825342889999999" green="0.2407897413" blue="0.2185710669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u9R-mh-ABO" kind="relationship" relationship="rootViewController" id="uQz-CV-9nu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZPq-AG-UxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195.6521739130435" y="875.89285714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
